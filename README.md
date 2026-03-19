@@ -26,5 +26,7 @@ Componente Java autocontido para cálculo de tributos tradicionais de holerite n
 ## Execução dos testes
 
 ```bash
+mvn test
+# ou
 ./scripts/test.sh
 ```
