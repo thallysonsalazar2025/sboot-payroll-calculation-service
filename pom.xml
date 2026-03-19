@@ -2,9 +2,48 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>br.com.payroll</groupId>
     <artifactId>sboot-payroll-calculation-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>sboot-payroll-calculation-service</name>
     <description>Projeto Java autocontido para cálculo de tributos de holerite</description>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <id>run-custom-tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>br.com.payroll.calculation.support.TestRunner</mainClass>
+                            <classpathScope>test</classpathScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
