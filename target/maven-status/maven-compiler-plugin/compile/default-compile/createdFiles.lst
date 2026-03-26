@@ -1,0 +1,16 @@
+br\com\payroll\calculation\domain\model\ProgressiveTaxBracket.class
+br\com\payroll\calculation\infrastructure\rules\InMemoryBrazilianTaxRuleCatalog.class
+br\com\payroll\calculation\api\PayrollTaxCalculationResponse.class
+br\com\payroll\calculation\application\PayrollTaxCalculationService.class
+br\com\payroll\calculation\domain\model\PayrollTaxBreakdown.class
+br\com\payroll\calculation\domain\model\TaxTables.class
+br\com\payroll\calculation\domain\model\CompanyInfo.class
+br\com\payroll\calculation\domain\service\PayrollTaxCalculator.class
+br\com\payroll\calculation\domain\service\TaxRuleCatalog.class
+br\com\payroll\calculation\api\PayrollTaxCalculationComponent.class
+br\com\payroll\calculation\domain\model\EmployeeInfo.class
+br\com\payroll\calculation\api\PayrollTaxCalculationRequest$CompanyPayload.class
+br\com\payroll\calculation\api\PayrollTaxCalculationRequest$EmployeePayload.class
+br\com\payroll\calculation\domain\model\PayrollInput.class
+br\com\payroll\calculation\api\PayrollTaxCalculationRequest.class
+br\com\payroll\calculation\domain\model\IncomeTaxReductionRule.class

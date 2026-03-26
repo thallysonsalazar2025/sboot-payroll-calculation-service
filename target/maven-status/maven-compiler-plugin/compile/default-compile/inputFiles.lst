@@ -1,0 +1,14 @@
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\api\PayrollTaxCalculationComponent.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\api\PayrollTaxCalculationRequest.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\api\PayrollTaxCalculationResponse.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\application\PayrollTaxCalculationService.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\CompanyInfo.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\EmployeeInfo.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\IncomeTaxReductionRule.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\PayrollInput.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\PayrollTaxBreakdown.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\ProgressiveTaxBracket.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\model\TaxTables.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\service\PayrollTaxCalculator.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\domain\service\TaxRuleCatalog.java
+C:\Workspace\sboot-payroll-calculation-service\src\main\java\br\com\payroll\calculation\infrastructure\rules\InMemoryBrazilianTaxRuleCatalog.java

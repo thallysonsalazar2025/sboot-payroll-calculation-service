@@ -1,0 +1,8 @@
+br\com\payroll\calculation\domain\service\PayrollTaxCalculationServiceTest$PayrollInputBuilder.class
+br\com\payroll\calculation\support\TestRunner.class
+br\com\payroll\calculation\api\PayrollTaxCalculationComponentIT.class
+org\junit\jupiter\api\Assertions$Executable.class
+org\junit\jupiter\api\Assertions.class
+org\junit\jupiter\api\Test.class
+br\com\payroll\calculation\domain\service\PayrollTaxCalculationServiceTest.class
+org\junit\jupiter\api\BeforeEach.class
