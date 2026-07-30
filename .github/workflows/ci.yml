@@ -44,6 +44,8 @@ jobs:
 
       - name: Dependency vulnerability scan
         uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: ''
         with:
           project: '${{ github.event.repository.name }}'
           path: '.'
