@@ -39,11 +39,10 @@ jobs:
       - name: Compile and run tests
         run: mvn --batch-mode --no-transfer-progress clean verify
 
-      - name: Unset JAVA_HOME for dependency check
-        run: echo "JAVA_HOME=" >> $GITHUB_ENV
-
       - name: Dependency vulnerability scan
-        uses: dependency-check/Dependency-Check_Action@main
+        uses: dependency-check/Dependency-Check_Action@75ba02d6183445fe0761d26e836bde58b1560600 # 1.1.0
+        env:
+          JAVA_HOME: /opt/jdk
         with:
           project: '${{ github.event.repository.name }}'
           path: '.'
