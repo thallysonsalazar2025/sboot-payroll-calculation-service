@@ -19,7 +19,7 @@ jobs:
   validate:
     name: Build, tests and security validation
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -50,7 +50,22 @@ jobs:
       - name: Verify negative coverage fixture
         run: python scripts/check-diff-coverage.py --self-test
 
+      - name: Define vulnerability database cache key
+        shell: bash
+        run: echo "ODC_CACHE_DATE=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+      - name: Restore daily vulnerability database cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: ~/.cache/dependency-check
+          key: ${{ runner.os }}-dependency-check-${{ env.ODC_CACHE_DATE }}
+          restore-keys: |
+            ${{ runner.os }}-dependency-check-
+
       - name: Dependency vulnerability scan
+        timeout-minutes: 35
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: >-
           mvn --batch-mode --no-transfer-progress
           org.owasp:dependency-check-maven:12.1.3:check

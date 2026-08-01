@@ -122,6 +122,9 @@
                 <version>${dependency-check.version}</version>
                 <configuration>
                     <failBuildOnCVSS>8</failBuildOnCVSS>
+                    <dataDirectory>${user.home}/.cache/dependency-check</dataDirectory>
+                    <nvdApiKeyEnvironmentVariable>NVD_API_KEY</nvdApiKeyEnvironmentVariable>
+                    <nvdValidForHours>24</nvdValidForHours>
                     <formats>
                         <format>HTML</format>
                         <format>JSON</format>
