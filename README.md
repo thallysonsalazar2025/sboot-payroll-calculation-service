@@ -30,3 +30,17 @@ mvn test
 # ou
 ./scripts/test.sh
 ```
+
+## Gates de qualidade
+
+`mvn clean verify` executa testes unitários (Surefire), testes de integração
+(Failsafe), mescla as duas execuções do JaCoCo e bloqueia regressões nos limites de
+cobertura. O mesmo ciclo executa SpotBugs 4.9.3.0 com severidade média ou superior.
+Na CI, Gitleaks v2 pinado por SHA inspeciona segredos e OWASP Dependency-Check
+bloqueia vulnerabilidades com CVSS 8 ou maior. O job de Pull Request consulta a
+NVD anonimamente e nunca disponibiliza uma chave da NVD ao código da branch.
+
+A exclusão SpotBugs em `config/spotbugs-exclude.xml` limita-se à dívida preexistente
+de mutabilidade das listas de faixas de `TaxTables` (`EI_EXPOSE_REP*`). Ela evita
+misturar alteração de domínio com o hardening da CI; qualquer outro achado médio ou
+superior continua bloqueando o build.

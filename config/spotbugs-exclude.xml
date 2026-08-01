@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Existing domain-model debt: TaxTables accepts/returns mutable bracket lists.
+         Kept narrowly scoped because this CI hardening change must not alter domain code. -->
+    <Match>
+        <Class name="br.com.payroll.calculation.domain.model.TaxTables"/>
+        <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+    </Match>
+</FindBugsFilter>
