@@ -11,7 +11,7 @@ line coverage or 60% branch coverage. `check-diff-coverage.py` separately requir
 100% line and branch coverage for executable Java lines added or changed in the
 pull request; the bundle thresholds prevent baseline regression.
 
-OWASP Dependency-Check 12.1.3 produces mandatory HTML and JSON reports and keeps
+OWASP Dependency-Check 12.2.2 produces mandatory HTML and JSON reports and keeps
 the CVSS 8 failure threshold. A missing report, a scanner/configuration failure,
 or a vulnerability at the threshold fails CI. NVD availability remains an
 external dependency; no NVD credential is exposed to pull requests.
