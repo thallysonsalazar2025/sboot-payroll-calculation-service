@@ -30,3 +30,15 @@ mvn test
 # ou
 ./scripts/test.sh
 ```
+
+## Evolução da entrega do projeto Orcazap
+
+O gráfico horizontal abaixo pode ser atualizado no próprio README para acompanhar o avanço das entregas do projeto.
+
+| Etapa | Evolução |
+| --- | --- |
+| Descoberta e alinhamento | `██████████░░░░░░░░░░` 50% |
+| Planejamento | `████████████░░░░░░░░` 60% |
+| Desenvolvimento | `████████░░░░░░░░░░░░` 40% |
+| Homologação | `████░░░░░░░░░░░░░░░░` 20% |
+| Go-live | `██░░░░░░░░░░░░░░░░░░` 10% |
