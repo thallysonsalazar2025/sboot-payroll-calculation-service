@@ -31,9 +31,10 @@ def jacoco_lines(report: Path) -> tuple[dict[tuple[str, int], tuple[int, int]], 
     result = {}
     sources = set()
     for package in root.findall("package"):
-        package_name = package.get("name", "")
+        package_name = package.get("name", "").strip("/")
         for source in package.findall("sourcefile"):
-            path = f"src/main/java/{package_name}/{source.get('name')}"
+            source_name = source.get("name")
+            path = f"src/main/java/{package_name}/{source_name}" if package_name else f"src/main/java/{source_name}"
             sources.add(path)
             for line in source.findall("line"):
                 result[(path, int(line.get("nr")))] = (
