@@ -21,8 +21,10 @@ def changed_lines(base: str) -> dict[str, set[int]]:
         elif current and line.startswith("@@"):
             added = line.split("+")[1].split(" ")[0]
             start, _, count = added.partition(",")
+            start_line = int(start)
             length = int(count or "1")
-            result.setdefault(current, set()).update(range(int(start), int(start) + length))
+            if length > 0:
+                result.setdefault(current, set()).update(range(start_line, start_line + length))
     return result
 
 
