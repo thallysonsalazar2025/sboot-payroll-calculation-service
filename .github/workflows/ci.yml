@@ -37,7 +37,7 @@ jobs:
       - name: Scan repository for secrets
         uses: gitleaks/gitleaks-action@dcedce43c6f43de0b836d1fe38946645c9c638dc # v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Validate Maven project
         run: mvn --batch-mode --no-transfer-progress validate
@@ -95,7 +95,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: test-and-coverage-reports
+          name: test-and-coverage-reports-${{ github.sha }}
           path: |
             target/surefire-reports
             target/failsafe-reports
@@ -107,7 +107,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: dependency-check-report
+          name: dependency-check-report-${{ github.sha }}
           path: |
             target/dependency-check-report.html
             target/dependency-check-report.json
